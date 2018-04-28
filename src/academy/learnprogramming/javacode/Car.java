@@ -1,5 +1,7 @@
 package academy.learnprogramming.javacode;
 
+import org.jetbrains.annotations.Nullable;
+
 public class Car {
 
     private String color;
@@ -16,11 +18,11 @@ public class Car {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(@Nullable String color) {
         this.color = color;
     }
 
-    public String getModel() {
+    public @Nullable String getModel() {
         return model;
     }
 
@@ -34,5 +36,14 @@ public class Car {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color='" + color + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                '}';
     }
 }
